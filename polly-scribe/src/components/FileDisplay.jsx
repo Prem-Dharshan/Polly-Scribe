@@ -8,7 +8,10 @@ const FileDisplay = (props) => {
         <span className='text-blue-400 bold'>File</span></h1>
         <div className='flex flex-col text-left mx-auto mb-7'>
             <h2 className='font-semibold text-2xl my-1'>Name</h2>
-            <p className='text-slate-400 text-lg'>{file.name}</p>
+            <div className='flex items-center gap-2'>
+                <i className="fa-solid fa-file-audio text-2xl"></i>
+                <p className='text-slate-400 text-lg'>{file ? file.name : 'Recorded Custom Audio'}</p>
+            </div>
         </div>
         <div className='flex justify-between items-center gap-96'>
             <button onClick={handleAudioReset} className='text-2xl text-slate-400 hover:text-blue-400'>Reset</button>

@@ -22,7 +22,7 @@ function App() {
         {isAudioAvailable ? (
           <FileDisplay handleAudioReset={handleAudioReset} file = {file} audioStream = {setAudioStream}/>
         ) : (
-        <HomePage setFile = {setFile} setAudioStream = {setAudioStream}/>
+          <HomePage setFile = {setFile} setAudioStream = {setAudioStream}/>
         )}
       </section> 
       <h1 className='text-5xl'>Hello</h1>
