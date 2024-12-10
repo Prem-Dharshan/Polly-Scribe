@@ -81,7 +81,7 @@ const HomePage = (props) => {
           {duration !== 0 && (
             <p className='text-lg'>{duration}s</p>
           )}
-          <i className={"fa-solid fa-microphone " + (recordingStatus === "recording" ? "text-rose-300" : "text-slate-400")}></i>
+          <i className={"fa-solid fa-microphone " + (recordingStatus === "recording" ? "text-rose-400" : "text-slate-400")}></i>
         </div>
       </button>
         <p className='text-slate-400 text-xl'>Or <label className='text-blue-400 cursor-pointer hover:text-blue-600 duration-200'>Upload
