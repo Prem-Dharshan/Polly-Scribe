@@ -30,7 +30,8 @@ async function transcribe(audio) {
     try {
         pipeline = await MyTranscriptionPipeline.getInstance(load_model_callback)
     } catch (err) {
-        console.log(err.message)
+        console.error(err)
+                console.log(err.message)
     }
 
     sendLoadingMessage('success')
@@ -38,7 +39,6 @@ async function transcribe(audio) {
     const stride_length_s = 5
 
     const generationTracker = new GenerationTracker(pipeline, stride_length_s)
-    
     await pipeline(audio, {
         top_k: 0,
         do_sample: false,
@@ -166,3 +166,4 @@ function createPartialResultMessage(result) {
         result
     })
 }
+
