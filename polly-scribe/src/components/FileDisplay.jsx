@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FileDisplay = (props) => {
-    const {handleAudioReset, file, audioStream} = props
+    const {handleAudioReset, file, audioStream, handleFormSubmission} = props
   return (
     <main className='flex-1 p-4 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5 text-center justify-center pb-20 w-fit max-w-full mx-auto'>
       <h1 className='font-semibold text-4xl sm:text-5xl md:text-6xl'>Your 
@@ -15,9 +15,9 @@ const FileDisplay = (props) => {
         </div>
         <div className='flex justify-between items-center gap-96'>
             <button onClick={handleAudioReset} className='text-2xl text-slate-400 hover:text-blue-400'>Reset</button>
-            <button className='flex gap-2 items-center text-xl text-slate-500 specialBtn rounded-xl px-4 py-2 hover:text-blue-400'>
+            <button onClick={handleFormSubmission} className='flex gap-2 items-center text-xl text-slate-500 specialBtn rounded-xl px-4 py-2 hover:text-blue-400'>
                 <p>Transcribe</p>
-                <i class="fa-solid fa-pencil"></i>
+                <i className="fa-solid fa-pencil"></i>
             </button>
         </div>
     </main>
